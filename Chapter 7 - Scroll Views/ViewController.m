@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property int LABEL_COUNT;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
@@ -27,12 +28,13 @@
     
 #if which==1
     
-    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame: self.view.bounds];
+    UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame: self.contentView.bounds];
     scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-    [self.view addSubview:scrollView];
+    [self.contentView addSubview:scrollView];
     scrollView.backgroundColor = [UIColor whiteColor];
     CGFloat y = 10;
     for (int i=0; i<self.LABEL_COUNT; i++) {
+        
         UILabel *label = [UILabel new];
        
         label.text = [NSString stringWithFormat:@"This is label %d", i + 1];
@@ -40,7 +42,7 @@
         CGRect labelFrame = label.frame;
         labelFrame.origin = CGPointMake(10,y);
         
-        labelFrame.size.width = self.view.bounds.size.width - 20;
+        labelFrame.size.width = self.contentView.bounds.size.width - 20;
         label.frame = labelFrame;
         label.backgroundColor = [UIColor lightGrayColor];
         label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
