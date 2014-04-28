@@ -19,15 +19,59 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lP-8d-Oaf">
                                 <rect key="frame" x="604" y="20" width="400" height="728"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ScrollView" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrz-Ti-NYM">
+                                        <rect key="frame" x="20" y="20" width="360" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UIViewAutoresizingMask:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Msx-ML-5G5">
+                                        <rect key="frame" x="20" y="49" width="194" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UIViewAutoresizingFlexibleWidth:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMy-at-HuC">
+                                        <rect key="frame" x="20" y="83" width="256" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UIViewAutoresizingFlexibleHeight:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tz8-h0-pIh">
+                                        <rect key="frame" x="20" y="117" width="261" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSH-lW-Paw">
+                                        <rect key="frame" x="289" y="73" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="uiViewAutoresizingFlexibleWidthToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="Gqb-a8-jkl"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U5G-NR-Ubg">
+                                        <rect key="frame" x="289" y="107" width="51" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="uiViewAutoresizingFlexibleHeightToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="fIg-Q3-3Qt"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
                                 <color key="backgroundColor" red="0.8718065693" green="0.87015282849999998" blue="0.8793339416" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="Yy8-r3-TUm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-Ko-JFz">
-                                <rect key="frame" x="20" y="20" width="576" height="728"/>
+                                <rect key="frame" x="20" y="20" width="300" height="728"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93521897810218979" green="0.92903170620437958" blue="0.93419251824817517" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="N4b-qS-M7E"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -36,7 +80,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0lP-8d-Oaf" secondAttribute="bottom" constant="20" id="Vfd-47-r6g"/>
                             <constraint firstItem="vbj-Ko-JFz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bPo-1i-0mO"/>
                             <constraint firstItem="0lP-8d-Oaf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hCW-lF-NNe"/>
-                            <constraint firstItem="0lP-8d-Oaf" firstAttribute="leading" secondItem="vbj-Ko-JFz" secondAttribute="trailing" constant="8" symbolic="YES" id="ngb-mY-Ae4"/>
                             <constraint firstItem="vbj-Ko-JFz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rZ5-BW-ulU"/>
                             <constraint firstAttribute="trailing" secondItem="0lP-8d-Oaf" secondAttribute="trailing" constant="20" id="wbJ-kP-Dgn"/>
                         </constraints>
@@ -45,6 +88,8 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="contentView" destination="vbj-Ko-JFz" id="Gs0-Ai-9gy"/>
+                        <outlet property="uiViewAutoresizingFlexibleHeightSwitch" destination="U5G-NR-Ubg" id="5Vs-W0-APK"/>
+                        <outlet property="uiViewAutoresizingFlexibleWidthSwitch" destination="cSH-lW-Paw" id="JvD-v0-ObG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
