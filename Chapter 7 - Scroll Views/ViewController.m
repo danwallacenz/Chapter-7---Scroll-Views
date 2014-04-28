@@ -21,33 +21,70 @@
 @implementation ViewController
 - (IBAction)uiViewAutoresizingFlexibleWidthToggled:(UISwitch *)sender
 {
-    [self.scrollView removeFromSuperview];
-    self.scrollView = nil;
-    
-    [self addScrollViewUsingAutoresizingMask];
-    if(!sender.on){
-        self.scrollView.backgroundColor = [UIColor greenColor];
-    }else{
-        self.scrollView.backgroundColor = [UIColor redColor];
-    }
-    
-    [self.view setNeedsDisplay];
+//    [self.scrollView removeFromSuperview];
+//    self.scrollView = nil;
+//    
+//    [self addScrollViewUsingAutoresizingMask];
+//    if(!sender.on){
+//        self.scrollView.backgroundColor = [UIColor greenColor];
+//    }else{
+//        self.scrollView.backgroundColor = [UIColor redColor];
+//    }
+//    
+//    [self.view setNeedsDisplay];
 }
 
 - (IBAction)uiViewAutoresizingFlexibleHeightToggled:(UISwitch *)sender
 {
-    [self.scrollView removeFromSuperview];
-    self.scrollView = nil;
+//    [self.scrollView removeFromSuperview];
+//    self.scrollView = nil;
+//    
+//    [self addScrollViewUsingAutoresizingMask];
+//    if(!sender.on){
+//        self.scrollView.backgroundColor = [UIColor yellowColor];
+//    }else{
+//        self.scrollView.backgroundColor = [UIColor redColor];
+//    }
+//    
+//    [self.view setNeedsDisplay];
+
+}
+
+- (void) addScrollViewUsingConstraints
+{
+    self.scrollView = [UIScrollView new];
+    self.scrollView.backgroundColor = [UIColor blueColor];
+    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.contentView addSubview:self.scrollView];
     
-    [self addScrollViewUsingAutoresizingMask];
-    if(!sender.on){
-        self.scrollView.backgroundColor = [UIColor yellowColor];
-    }else{
-        self.scrollView.backgroundColor = [UIColor redColor];
+    UIScrollView *localScrollView = self.scrollView;
+    
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[localScrollView]|" options:0 metrics:nil views:@{@"localScrollView":localScrollView}]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[localScrollView]|" options:0 metrics:nil views:@{@"localScrollView":localScrollView}]];
+    
+    UILabel *previousLabel = nil;
+    UILabel *label = nil;
+    for (int i = 0; i<50; i++) {
+        label = [UILabel new];
+        label.translatesAutoresizingMaskIntoConstraints = NO;
+        label.text = [NSString stringWithFormat:@"This is label %d", i + 1];
+        label.backgroundColor = [UIColor darkGrayColor];
+        
+        [self.scrollView addSubview:label];
+        
+        [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(10)-[label]" options:0 metrics:nil views:@{@"label":label}]];
+        
+        if(!previousLabel){ // first one, pin to top
+            [localScrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(10)-[label]" options:0 metrics:nil views:@{@"label":label}]];
+        }else{              // all others, pin to previous
+            [localScrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[prev]-(10)-[label]" options:0 metrics:nil views:@{@"label":label, @"prev": previousLabel}]];
+        }
+        previousLabel = label;
     }
     
-    [self.view setNeedsDisplay];
-
+    [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[label]-(10)-|" options:0 metrics:nil views:@{ @"label": previousLabel}]];
+    
+    NSLog(@"scrollView bounds: height = %f, width = %f", self.scrollView.bounds.size.height, self.scrollView.bounds.size.width);
 }
 
 - (void)addScrollViewUsingAutoresizingMask
@@ -71,8 +108,8 @@
         uiViewAutoresizing = UIViewAutoresizingFlexibleHeight;
     }
     
-    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-//    self.scrollView. autoresizingMask = uiViewAutoresizing;
+//    self.scrollView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    self.scrollView. autoresizingMask = uiViewAutoresizing;
     
     [self.contentView addSubview:self.scrollView];
     self.scrollView.backgroundColor = [UIColor blueColor];
@@ -103,6 +140,12 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+     [self addScrollViewUsingConstraints];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -110,7 +153,7 @@
     
     self.LABEL_COUNT = 50;
     
-#define which 1
+#define which 2
     
 #if which==1
     
@@ -118,7 +161,7 @@
     
 #elif which==2
     
-    
+//    [self addScrollViewUsingConstraints];
     
 #endif
     

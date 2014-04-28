@@ -10,12 +10,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chapter 7 - Scroll Views/ViewController.m"
-            timestampString = "420353845.41002"
+            timestampString = "420357672.085144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "-addScrollViewUsingAutoresizingMask"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chapter 7 - Scroll Views/ViewController.m"
+            timestampString = "420357662.270444"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "-addScrollViewUsingConstraints"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
