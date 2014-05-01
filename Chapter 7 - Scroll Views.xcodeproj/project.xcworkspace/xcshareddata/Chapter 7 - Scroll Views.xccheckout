@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0D26C810-9778-42FC-9AC6-B90C31CD278F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Chapter 7 - Scroll Views</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>ABE506CE-38CE-4B65-810A-D79A1DD87E5B</key>
+		<string>http://172.17.180.143:7990/scm/dan/chapter-7-scroll-views.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Chapter 7 - Scroll Views.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>ABE506CE-38CE-4B65-810A-D79A1DD87E5B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://172.17.180.143:7990/scm/dan/chapter-7-scroll-views.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ABE506CE-38CE-4B65-810A-D79A1DD87E5B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ABE506CE-38CE-4B65-810A-D79A1DD87E5B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Chapter 7 - Scroll Views</string>
+		</dict>
+	</array>
+</dict>
+</plist>

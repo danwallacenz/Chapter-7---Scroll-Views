@@ -53,7 +53,7 @@
 - (void) addScrollViewUsingConstraints
 {
     self.scrollView = [UIScrollView new];
-    self.scrollView.backgroundColor = [UIColor blueColor];
+    self.scrollView.backgroundColor = [UIColor lightGrayColor];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.contentView addSubview:self.scrollView];
     
@@ -112,10 +112,10 @@
     self.scrollView. autoresizingMask = uiViewAutoresizing;
     
     [self.contentView addSubview:self.scrollView];
-    self.scrollView.backgroundColor = [UIColor blueColor];
+    self.scrollView.backgroundColor = [UIColor lightGrayColor];
 
     
-    self.scrollView.backgroundColor = [UIColor redColor];
+//    self.scrollView.backgroundColor = [UIColor redColor];
     CGFloat y = 10;
     for (int i=0; i<self.LABEL_COUNT; i++) {
         
