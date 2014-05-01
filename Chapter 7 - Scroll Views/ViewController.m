@@ -55,7 +55,15 @@
     self.scrollView = [UIScrollView new];
     self.scrollView.backgroundColor = [UIColor lightGrayColor];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // scrollView border
+    self.scrollView.layer.masksToBounds = YES;
+    self.scrollView.layer.borderColor = [UIColor blueColor].CGColor;
+    self.scrollView.layer.borderWidth = 2;
+    
+    
     [self.contentView addSubview:self.scrollView];
+    self.contentView.backgroundColor = [UIColor redColor];
     
     UIScrollView *localScrollView = self.scrollView;
     
@@ -64,15 +72,25 @@
     
     UILabel *previousLabel = nil;
     UILabel *label = nil;
-    for (int i = 0; i<50; i++) {
+    for (int i = 0; i < self.LABEL_COUNT; i++) {
         label = [UILabel new];
         label.translatesAutoresizingMaskIntoConstraints = NO;
         label.text = [NSString stringWithFormat:@"This is label %d", i + 1];
         label.backgroundColor = [UIColor darkGrayColor];
         
         [self.scrollView addSubview:label];
+
         
-        [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(10)-[label]" options:0 metrics:nil views:@{@"label":label}]];
+        // label border
+        label.layer.masksToBounds = YES;
+        label.layer.borderColor = [UIColor redColor].CGColor;
+        label.layer.borderWidth = 2;
+        
+        
+        
+//        NSString *labelHorizontalLayout = @"H:|-(10)-[label]-(10)-|";
+        NSString *labelHorizontalLayout = @"H:|-[label]-|";
+        [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat: labelHorizontalLayout options:0 metrics:nil views:@{@"label":label}]];
         
         if(!previousLabel){ // first one, pin to top
             [localScrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(10)-[label]" options:0 metrics:nil views:@{@"label":label}]];
