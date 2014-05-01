@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chapter 7 - Scroll Views/ViewController.m"
-            timestampString = "420609176.156523"
+            timestampString = "420609932.830737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
             landmarkName = "-addScrollViewUsingAutoresizingMask"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Chapter 7 - Scroll Views/ViewController.m"
-            timestampString = "420609176.156523"
+            timestampString = "420609932.830737"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "-addScrollViewUsingAutoresizingMask"
             landmarkType = "5">
          </BreakpointContent>
