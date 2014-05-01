@@ -56,6 +56,8 @@
     self.scrollView.backgroundColor = [UIColor lightGrayColor];
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
     
+    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    
     // scrollView border
     self.scrollView.layer.masksToBounds = YES;
     self.scrollView.layer.borderColor = [UIColor blueColor].CGColor;
@@ -89,7 +91,7 @@
         
         
 //        NSString *labelHorizontalLayout = @"H:|-(10)-[label]-(10)-|";
-        NSString *labelHorizontalLayout = @"H:|-[label]-|";
+        NSString *labelHorizontalLayout = @"H:|-[label]-(10)-|";
         [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat: labelHorizontalLayout options:0 metrics:nil views:@{@"label":label}]];
         
         if(!previousLabel){ // first one, pin to top
