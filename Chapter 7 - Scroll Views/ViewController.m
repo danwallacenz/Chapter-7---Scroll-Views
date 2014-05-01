@@ -183,7 +183,30 @@
     
 #endif
     
+//    [self addTestLabel];
 }
+
+- (void) addTestLabel
+{
+    UIView *labelContainer = [UIView new];
+    labelContainer.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:labelContainer];
+    labelContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-350-[labelContainer]-450-|" options:0 metrics:nil views:@{@"labelContainer":labelContainer}]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-200-[labelContainer]-200-|" options:0 metrics:nil views:@{@"labelContainer":labelContainer}]];
+    
+    UILabel *testLabel = [UILabel new];
+    testLabel.backgroundColor = [UIColor redColor];
+    testLabel.text = @"testLabel";
+    testLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [labelContainer addSubview:testLabel];
+    //
+    [labelContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[testLabel]-10-|" options:0 metrics:nil views:@{@"testLabel":testLabel}]];
+    [labelContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[testLabel]" options:0 metrics:nil views:@{@"testLabel":testLabel}]];
+
+}
+
 
 - (void)didReceiveMemoryWarning
 {
