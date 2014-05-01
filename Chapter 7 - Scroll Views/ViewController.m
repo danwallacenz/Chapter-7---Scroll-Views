@@ -82,22 +82,17 @@
         
         [self.scrollView addSubview:label];
 
-        
         // label border
         label.layer.masksToBounds = YES;
         label.layer.borderColor = [UIColor redColor].CGColor;
         label.layer.borderWidth = 2;
         
         
-        
-//        NSString *labelHorizontalLayout = @"H:|-(10)-[label]-(10)-|";
         NSString *labelHorizontalLayout = @"H:|-(10)-[label]-(10)-|";
         
         
         [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat: labelHorizontalLayout options:0 metrics:nil views:@{@"label":label}]];
 
-        
-        
 //        [self.scrollView addConstraint: [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeRight
 //                                     relatedBy: NSLayoutRelationEqual toItem: self.scrollView
 //                                     attribute: NSLayoutAttributeRight multiplier:1.0 constant: 12.0]];
@@ -105,12 +100,11 @@
 //        [self.scrollView addConstraint: [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeLeft
 //                                                                     relatedBy: NSLayoutRelationEqual toItem: self.scrollView
 //                                                                     attribute: NSLayoutAttributeLeft multiplier:1.0 constant: 12.0]];
-//        
+//
+//       Cannot use visual format to center a view.
         [self.scrollView addConstraint: [NSLayoutConstraint constraintWithItem:label attribute:NSLayoutAttributeCenterX
                                                                      relatedBy: NSLayoutRelationEqual toItem: self.scrollView
                                                                      attribute: NSLayoutAttributeCenterX multiplier:1.0 constant: 0]];
-        
-        
         
         if(!previousLabel){ // first one, pin to top
             [localScrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(10)-[label]" options:0 metrics:nil views:@{@"label":label}]];
