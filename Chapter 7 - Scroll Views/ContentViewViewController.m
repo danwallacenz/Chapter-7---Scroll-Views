@@ -19,6 +19,8 @@
 
 @implementation ContentViewViewController
 
+const float LABEL_COUNT = 50;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -34,12 +36,42 @@
     // Do any additional setup after loading the view.
     
     
+    // Create four scroll views with content views with different colors.
     [self createScrollViewInView:self.scrollViewContainer0 withColor: [UIColor greenColor]];
     [self createScrollViewInView:self.scrollViewContainer1 withColor: [UIColor redColor]];
     [self createScrollViewInView:self.scrollViewContainer2 withColor: [UIColor blueColor]];
     [self createScrollViewInView:self.scrollViewContainer3 withColor: [UIColor orangeColor]];
  
+    [self loadScrollViewWithNoConstraintsInView: self.scrollViewContainer0];
+    
 }
+
+-(void) loadScrollViewWithNoConstraintsInView: (UIView *)containerView
+{
+    CGFloat y = 10;
+    
+    UIScrollView *scrollView = containerView.subviews[0];
+    UIView *contentView = scrollView.subviews[0];
+    
+    for (int i = 0; i < LABEL_COUNT; i++) {
+        UILabel *label = [UILabel new];
+        label.text = [NSString stringWithFormat: @"No Constraints %d", i+1 ];
+        
+        [label sizeToFit];
+        
+        CGRect labelFrame = label.frame;
+        labelFrame.origin = CGPointMake(10, y);
+        label.frame = labelFrame;
+        
+        [contentView addSubview:label];
+        y += label.bounds.size.height + 10;
+    }
+    if(contentView){
+        contentView.frame = CGRectMake(0, 0, 0, y);
+        scrollView.contentSize = contentView.frame.size;
+    }
+}
+
 
 -(void) createScrollViewInView:(UIView *)containerView withColor: (UIColor *)color
 {
