@@ -19,6 +19,7 @@
 @end
 
 @implementation ViewController
+
 - (IBAction)uiViewAutoresizingFlexibleWidthToggled:(UISwitch *)sender
 {
 //    [self.scrollView removeFromSuperview];
@@ -175,7 +176,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-     [self addScrollViewUsingConstraints];
+//     [self addScrollViewUsingConstraints];
 }
 
 - (void)viewDidLoad
@@ -185,7 +186,7 @@
     
     self.LABEL_COUNT = 50;
     
-#define which 2
+#define which 1
     
 #if which==1
     
@@ -193,33 +194,33 @@
     
 #elif which==2
     
-//    [self addScrollViewUsingConstraints];
+    [self addScrollViewUsingConstraints];
     
 #endif
     
 //    [self addTestLabel];
 }
 
-- (void) addTestLabel
-{
-    UIView *labelContainer = [UIView new];
-    labelContainer.backgroundColor = [UIColor yellowColor];
-    [self.view addSubview:labelContainer];
-    labelContainer.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-350-[labelContainer]-450-|" options:0 metrics:nil views:@{@"labelContainer":labelContainer}]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-200-[labelContainer]-200-|" options:0 metrics:nil views:@{@"labelContainer":labelContainer}]];
-    
-    UILabel *testLabel = [UILabel new];
-    testLabel.backgroundColor = [UIColor redColor];
-    testLabel.text = @"testLabel";
-    testLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    
-    [labelContainer addSubview:testLabel];
-    //
-    [labelContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[testLabel]-10-|" options:0 metrics:nil views:@{@"testLabel":testLabel}]];
-    [labelContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[testLabel]" options:0 metrics:nil views:@{@"testLabel":testLabel}]];
-
-}
+//- (void) addTestLabel
+//{
+//    UIView *labelContainer = [UIView new];
+//    labelContainer.backgroundColor = [UIColor yellowColor];
+//    [self.view addSubview:labelContainer];
+//    labelContainer.translatesAutoresizingMaskIntoConstraints = NO;
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-350-[labelContainer]-450-|" options:0 metrics:nil views:@{@"labelContainer":labelContainer}]];
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-200-[labelContainer]-200-|" options:0 metrics:nil views:@{@"labelContainer":labelContainer}]];
+//    
+//    UILabel *testLabel = [UILabel new];
+//    testLabel.backgroundColor = [UIColor redColor];
+//    testLabel.text = @"testLabel";
+//    testLabel.translatesAutoresizingMaskIntoConstraints = NO;
+//    
+//    [labelContainer addSubview:testLabel];
+//    //
+//    [labelContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-30-[testLabel]-10-|" options:0 metrics:nil views:@{@"testLabel":testLabel}]];
+//    [labelContainer addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[testLabel]" options:0 metrics:nil views:@{@"testLabel":testLabel}]];
+//
+//}
 
 
 - (void)didReceiveMemoryWarning

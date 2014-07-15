@@ -1,10 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="rs2-D0-oMV">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Conten View View Controller - Content View-->
+        <scene sceneID="W8A-Rd-RRo">
+            <objects>
+                <viewController id="V6O-Ip-psu" customClass="ContenViewViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4bK-fc-wvW"/>
+                        <viewControllerLayoutGuide type="bottom" id="qE4-PS-VYn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cD8-4e-Eaw">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E61-Kh-BaK">
+                                <rect key="frame" x="20" y="20" width="230" height="680"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.93909136965142803" blue="0.44834366705396245" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="IWl-Tc-Kr9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iTM-L0-aE7">
+                                <rect key="frame" x="258" y="20" width="230" height="680"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.93909136969999996" blue="0.44834366710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEg-B4-BtM">
+                                <rect key="frame" x="496" y="20" width="230" height="680"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.93909136969999996" blue="0.44834366710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBU-vy-epJ">
+                                <rect key="frame" x="734" y="20" width="230" height="680"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.93909136969999996" blue="0.44834366710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99279068217986632" green="1" blue="0.58060650126262703" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="E61-Kh-BaK" firstAttribute="top" secondItem="4bK-fc-wvW" secondAttribute="bottom" id="86S-Z4-3YV"/>
+                            <constraint firstItem="qE4-PS-VYn" firstAttribute="top" secondItem="E61-Kh-BaK" secondAttribute="bottom" constant="19" id="HSf-ye-iij"/>
+                            <constraint firstItem="E61-Kh-BaK" firstAttribute="leading" secondItem="cD8-4e-Eaw" secondAttribute="leading" constant="20" id="gl9-4k-ixg"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Content View" id="fKT-c6-IuF"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C1C-7k-JFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2199" y="-2804"/>
+        </scene>
+        <!--View Controller - Original Version-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -16,7 +67,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lP-8d-Oaf">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0lP-8d-Oaf">
                                 <rect key="frame" x="604" y="20" width="400" height="728"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -65,7 +116,7 @@
                                     <constraint firstAttribute="width" constant="400" id="Yy8-r3-TUm"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-Ko-JFz">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vbj-Ko-JFz">
                                 <rect key="frame" x="20" y="20" width="300" height="728"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93521897810218979" green="0.92903170620437958" blue="0.93419251824817517" alpha="1" colorSpace="calibratedRGB"/>
@@ -85,6 +136,7 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Original Version" id="7h6-Z9-hgJ"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="contentView" destination="vbj-Ko-JFz" id="Gs0-Ai-9gy"/>
@@ -94,6 +146,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2199" y="-1913"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fsb-UG-EJS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rs2-D0-oMV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="0sB-3N-I1b">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V6O-Ip-psu" kind="relationship" relationship="viewControllers" id="d2u-JW-DyL"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="50x-HJ-XQ3"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dV-DO-Fgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3213" y="-2509"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
