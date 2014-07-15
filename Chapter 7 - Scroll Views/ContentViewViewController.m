@@ -33,8 +33,6 @@ const float LABEL_COUNT = 50;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     
     // Create four scroll views with content views with different colors.
     [self createScrollViewInView:self.scrollViewContainer0 withColor: [UIColor greenColor]];
@@ -63,9 +61,13 @@ const float LABEL_COUNT = 50;
         labelFrame.origin = CGPointMake(10, y);
         label.frame = labelFrame;
         
+//        label.backgroundColor = contentView.backgroundColor;
+        
         [contentView addSubview:label];
         y += label.bounds.size.height + 10;
     }
+    
+    // Set content view frame and scroll view contentSize explicitly.
     if(contentView){
         contentView.frame = CGRectMake(0, 0, 0, y);
         scrollView.contentSize = contentView.frame.size;
