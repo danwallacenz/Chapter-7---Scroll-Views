@@ -10,6 +10,11 @@
 
 @interface ContentViewViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *scrollViewContainer0;
+@property (weak, nonatomic) IBOutlet UIView *scrollViewContainer1;
+@property (weak, nonatomic) IBOutlet UIView *scrollViewContainer2;
+@property (weak, nonatomic) IBOutlet UIView *scrollViewContainer3;
+
 @end
 
 @implementation ContentViewViewController
@@ -27,23 +32,53 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UIScrollView *scrollView = [UIScrollView new];
+    scrollView.backgroundColor = [UIColor whiteColor];
+    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.scrollViewContainer0 addSubview:scrollView];
+    
+    [self.scrollViewContainer0 addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrollView]|"
+                                             options:0
+                                             metrics:nil
+                                               views:@{@"scrollView":scrollView}]];
+    
+    [self.scrollViewContainer0 addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|"
+                                             options:0
+                                             metrics:nil
+                                               views:@{@"scrollView":scrollView}]];
+    UIView *contentView = [UIView new];
+    contentView.backgroundColor = [UIColor greenColor];
+    [scrollView addSubview:contentView];
+//    contentView.frame =CGRectMake(0, 0, 100, 100);
+ 
 }
 
-- (void)didReceiveMemoryWarning
+-(void) createScrollViewInView:(UIView *)containerView withColor: (UIColor *)color
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIScrollView *scrollView = [UIScrollView new];
+    scrollView.backgroundColor = [UIColor whiteColor];
+    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    [containerView addSubview:scrollView];
+    
+    [containerView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrollView]|"
+                                             options:0
+                                             metrics:nil
+                                               views:@{@"scrollView":scrollView}]];
+    
+    [containerView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|"
+                                             options:0
+                                             metrics:nil
+                                               views:@{@"scrollView":scrollView}]];
+    UIView *contentView = [UIView new];
+    contentView.backgroundColor = color;
+    [scrollView addSubview:contentView];
+    contentView.frame =CGRectMake(0, 0, 100, 100);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

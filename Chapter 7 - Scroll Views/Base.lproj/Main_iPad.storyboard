@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Conten View View Controller - Content View-->
+        <!--Content View View Controller - Content View-->
         <scene sceneID="W8A-Rd-RRo">
             <objects>
-                <viewController id="V6O-Ip-psu" customClass="ContenViewViewController" sceneMemberID="viewController">
+                <viewController id="V6O-Ip-psu" customClass="ContentViewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4bK-fc-wvW"/>
                         <viewControllerLayoutGuide type="bottom" id="qE4-PS-VYn"/>
@@ -68,6 +68,12 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Content View" id="fKT-c6-IuF"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="scrollViewContainer0" destination="E61-Kh-BaK" id="PPL-l2-k1W"/>
+                        <outlet property="scrollViewContainer1" destination="iTM-L0-aE7" id="gBb-3B-qAs"/>
+                        <outlet property="scrollViewContainer2" destination="uEg-B4-BtM" id="8Ck-ee-Wb6"/>
+                        <outlet property="scrollViewContainer3" destination="VBU-vy-epJ" id="TDv-6q-PcW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1C-7k-JFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
