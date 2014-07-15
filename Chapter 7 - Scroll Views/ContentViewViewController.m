@@ -33,26 +33,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIScrollView *scrollView = [UIScrollView new];
-    scrollView.backgroundColor = [UIColor whiteColor];
-    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.scrollViewContainer0 addSubview:scrollView];
     
-    [self.scrollViewContainer0 addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrollView]|"
-                                             options:0
-                                             metrics:nil
-                                               views:@{@"scrollView":scrollView}]];
-    
-    [self.scrollViewContainer0 addConstraints:
-     [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|"
-                                             options:0
-                                             metrics:nil
-                                               views:@{@"scrollView":scrollView}]];
-    UIView *contentView = [UIView new];
-    contentView.backgroundColor = [UIColor greenColor];
-    [scrollView addSubview:contentView];
-//    contentView.frame =CGRectMake(0, 0, 100, 100);
+    [self createScrollViewInView:self.scrollViewContainer0 withColor: [UIColor greenColor]];
+    [self createScrollViewInView:self.scrollViewContainer1 withColor: [UIColor redColor]];
+    [self createScrollViewInView:self.scrollViewContainer2 withColor: [UIColor blueColor]];
+    [self createScrollViewInView:self.scrollViewContainer3 withColor: [UIColor orangeColor]];
  
 }
 
