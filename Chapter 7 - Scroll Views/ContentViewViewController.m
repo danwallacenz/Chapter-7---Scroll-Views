@@ -104,7 +104,7 @@ const float LABEL_COUNT = 50;
         label.frame = labelFrame;
         
         label.backgroundColor = contentView.backgroundColor;
-        
+
         [contentView addSubview:label];
         y += label.bounds.size.height + 10;
     }
