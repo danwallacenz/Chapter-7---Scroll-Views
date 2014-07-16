@@ -32,13 +32,46 @@
                                                     <constraint firstAttribute="height" constant="300" id="X4m-7K-Nyd"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="htQ-t1-tSm">
+                                                <rect key="frame" x="20" y="328" width="984" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="0.14485051706342267" green="0.49456390914660564" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="GNP-sa-Uko"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZPU-pi-N6D">
+                                                <rect key="frame" x="20" y="636" width="984" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="0.32377694993467221" green="1" blue="0.31533992915617515" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="aSd-5g-xZV"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="998-Hn-XTA">
+                                                <rect key="frame" x="20" y="944" width="984" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.19436912003086659" blue="0.88066474447092613" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="gzL-pY-tRX"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="cK4-Nk-aUo" secondAttribute="trailing" constant="20" id="53p-6J-6LD"/>
+                                            <constraint firstItem="ZPU-pi-N6D" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="B1O-0z-4ly"/>
+                                            <constraint firstItem="htQ-t1-tSm" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="GUl-G5-U72"/>
+                                            <constraint firstAttribute="trailing" secondItem="htQ-t1-tSm" secondAttribute="trailing" constant="20" id="HYv-bx-qKt"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZPU-pi-N6D" secondAttribute="trailing" constant="20" id="LGO-Se-qge"/>
+                                            <constraint firstItem="998-Hn-XTA" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="Rbv-0m-JgD"/>
+                                            <constraint firstItem="htQ-t1-tSm" firstAttribute="top" secondItem="cK4-Nk-aUo" secondAttribute="bottom" constant="8" id="VAG-zT-ff6"/>
+                                            <constraint firstItem="998-Hn-XTA" firstAttribute="top" secondItem="ZPU-pi-N6D" secondAttribute="bottom" constant="8" id="VMU-hh-xee"/>
+                                            <constraint firstItem="ZPU-pi-N6D" firstAttribute="top" secondItem="htQ-t1-tSm" secondAttribute="bottom" constant="8" id="kEs-XD-Lwv"/>
                                             <constraint firstAttribute="height" constant="2000" id="oAW-yR-K7V"/>
                                             <constraint firstItem="cK4-Nk-aUo" firstAttribute="top" secondItem="g9R-Nh-tKT" secondAttribute="top" constant="20" id="sB1-TM-ocK"/>
                                             <constraint firstItem="cK4-Nk-aUo" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="tJB-1h-7Y9"/>
+                                            <constraint firstAttribute="trailing" secondItem="998-Hn-XTA" secondAttribute="trailing" constant="20" id="xgf-NK-VIx"/>
                                             <constraint firstAttribute="width" constant="1024" id="yAo-uc-r0T"/>
                                         </constraints>
                                     </view>
