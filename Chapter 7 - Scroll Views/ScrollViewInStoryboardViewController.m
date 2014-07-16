@@ -114,5 +114,22 @@
     NSLog(@"UIScrollViewDelegate  scrollViewDidEndScrollingAnimation");
 }
 
+-(NSString *)diagnostics
+{
+    NSString *diagnostics = @"";
+    NSString *contentSize = NSStringFromCGSize(self.scrollView.contentSize);
+    NSString *contentOffset = NSStringFromCGPoint(self.scrollView.contentOffset);
+    NSString *bounds = NSStringFromCGRect(self.scrollView.bounds);
+    NSString *contentInset = NSStringFromUIEdgeInsets(self.scrollView.contentInset);
+    NSString *decelerating = [NSString stringWithFormat:@"%@", self.scrollView.decelerating?@"yes":@"no"];
+
+    diagnostics = [diagnostics stringByAppendingString:contentSize];
+    diagnostics = [diagnostics stringByAppendingString:contentOffset];
+    diagnostics = [diagnostics stringByAppendingString:bounds];
+    diagnostics = [diagnostics stringByAppendingString:contentInset];
+    diagnostics = [diagnostics stringByAppendingString:decelerating];
+    
+    return diagnostics;
+}
 
 @end
