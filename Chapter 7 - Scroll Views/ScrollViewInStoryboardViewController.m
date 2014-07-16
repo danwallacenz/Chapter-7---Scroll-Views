@@ -8,48 +8,97 @@
 
 #import "ScrollViewInStoryboardViewController.h"
 
-@interface ScrollViewInStoryboardViewController ()
+@interface ScrollViewInStoryboardViewController () <UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 
 @end
 
 @implementation ScrollViewInStoryboardViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-//    self.scrollView.contentSize = ((UIView *)self.scrollView.subviews[0]).bounds.size;
+    self.scrollView.delegate = self;
 }
 
-- (void)didReceiveMemoryWarning
+#pragma mark - UIScrollViewDelegate
+
+#pragma mark Responding to Scrolling and Dragging
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"UIScrollViewDelegate scrollViewDidScroll - bounds origin: %@",  NSStringFromCGPoint(scrollView.bounds.origin));
 }
 
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSLog(@"UIScrollViewDelegate scrollViewWillBeginDragging ");
 }
-*/
+
+-(void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewWillEndDragging");
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewDidEndDragging");
+}
+
+-(BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewShouldScrollToTop");
+    return YES;
+}
+
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate scrollViewDidScrollToTop ");
+}
+
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewWillBeginDecelerating");
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewDidEndDecelerating");
+}
+
+#pragma mark Managing Zooming
+
+-(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate  viewForZoomingInScrollView");
+    return self.contentView;
+}
+
+- (void)scrollViewWillBeginZooming:(UIScrollView *)scrollView withView:(UIView *)view
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewWillBeginZooming");
+}
+
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewDidEndZooming");
+}
+
+-(void)scrollViewDidZoom:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewDidZoom");
+}
+
+#pragma mark Responding to Scrolling Animations
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    NSLog(@"UIScrollViewDelegate  scrollViewDidEndScrollingAnimation");
+}
+
 
 @end

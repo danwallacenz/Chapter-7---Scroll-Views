@@ -97,10 +97,14 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="2000"/>
+                    <connections>
+                        <outlet property="contentView" destination="g9R-Nh-tKT" id="ca3-uo-VLg"/>
+                        <outlet property="scrollView" destination="Xnp-ME-lAq" id="6SR-1e-hx6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSk-oy-S4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2199" y="-4089"/>
+            <point key="canvasLocation" x="-2199" y="-4894"/>
         </scene>
         <!--View Controller - Content View-->
         <scene sceneID="W8A-Rd-RRo">
