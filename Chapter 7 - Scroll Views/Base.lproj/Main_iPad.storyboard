@@ -23,9 +23,22 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9R-Nh-tKT">
                                         <rect key="frame" x="0.0" y="0.0" width="1024" height="2000"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-Nk-aUo">
+                                                <rect key="frame" x="20" y="20" width="984" height="300"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" red="1" green="0.1098670754" blue="0.18903616740000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="X4m-7K-Nyd"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="cK4-Nk-aUo" secondAttribute="trailing" constant="20" id="53p-6J-6LD"/>
                                             <constraint firstAttribute="height" constant="2000" id="oAW-yR-K7V"/>
+                                            <constraint firstItem="cK4-Nk-aUo" firstAttribute="top" secondItem="g9R-Nh-tKT" secondAttribute="top" constant="20" id="sB1-TM-ocK"/>
+                                            <constraint firstItem="cK4-Nk-aUo" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="tJB-1h-7Y9"/>
                                             <constraint firstAttribute="width" constant="1024" id="yAo-uc-r0T"/>
                                         </constraints>
                                     </view>
@@ -50,6 +63,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="CaT-qY-7E0"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="2000"/>
                     <connections>
                         <outlet property="scrollView" destination="Xnp-ME-lAq" id="zCx-39-c0d"/>
                     </connections>
