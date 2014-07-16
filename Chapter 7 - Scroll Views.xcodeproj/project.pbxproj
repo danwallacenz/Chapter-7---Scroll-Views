@@ -22,6 +22,7 @@
 		E0320F5B190DF87D00B76BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0320F3A190DF87D00B76BCB /* UIKit.framework */; };
 		E0320F63190DF87D00B76BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0320F61190DF87D00B76BCB /* InfoPlist.strings */; };
 		E0320F65190DF87D00B76BCB /* Chapter_7___Scroll_ViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0320F64190DF87D00B76BCB /* Chapter_7___Scroll_ViewsTests.m */; };
+		E062A07F1975D30F00A53A80 /* ContentViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E062A07E1975D30F00A53A80 /* ContentViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		E0320F60190DF87D00B76BCB /* Chapter 7 - Scroll ViewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Chapter 7 - Scroll ViewsTests-Info.plist"; sourceTree = "<group>"; };
 		E0320F62190DF87D00B76BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E0320F64190DF87D00B76BCB /* Chapter_7___Scroll_ViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Chapter_7___Scroll_ViewsTests.m"; sourceTree = "<group>"; };
+		E062A07D1975D30F00A53A80 /* ContentViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewViewController.h; sourceTree = "<group>"; };
+		E062A07E1975D30F00A53A80 /* ContentViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +121,7 @@
 				E0320F46190DF87D00B76BCB /* AppDelegate.m */,
 				E0320F48190DF87D00B76BCB /* Main_iPhone.storyboard */,
 				E0320F4B190DF87D00B76BCB /* Main_iPad.storyboard */,
-				E0320F4E190DF87D00B76BCB /* ViewController.h */,
-				E0320F4F190DF87D00B76BCB /* ViewController.m */,
+				E062A0801975D31C00A53A80 /* view controllers */,
 				E0320F51190DF87D00B76BCB /* Images.xcassets */,
 				E0320F3D190DF87D00B76BCB /* Supporting Files */,
 			);
@@ -153,6 +155,17 @@
 				E0320F61190DF87D00B76BCB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E062A0801975D31C00A53A80 /* view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E062A07D1975D30F00A53A80 /* ContentViewViewController.h */,
+				E062A07E1975D30F00A53A80 /* ContentViewViewController.m */,
+				E0320F4E190DF87D00B76BCB /* ViewController.h */,
+				E0320F4F190DF87D00B76BCB /* ViewController.m */,
+			);
+			name = "view controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +268,7 @@
 			files = (
 				E0320F50190DF87D00B76BCB /* ViewController.m in Sources */,
 				E0320F47190DF87D00B76BCB /* AppDelegate.m in Sources */,
+				E062A07F1975D30F00A53A80 /* ContentViewViewController.m in Sources */,
 				E0320F43190DF87D00B76BCB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +484,7 @@
 				E0320F6A190DF87D00B76BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E0320F6B190DF87D00B76BCB /* Build configuration list for PBXNativeTarget "Chapter 7 - Scroll ViewsTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +493,7 @@
 				E0320F6D190DF87D00B76BCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
