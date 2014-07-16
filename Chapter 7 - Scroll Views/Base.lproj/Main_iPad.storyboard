@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="-2199" y="-4894"/>
         </scene>
-        <!--View Controller - Content View-->
+        <!--Content View View Controller - Content View-->
         <scene sceneID="W8A-Rd-RRo">
             <objects>
-                <viewController id="V6O-Ip-psu" sceneMemberID="viewController">
+                <viewController id="V6O-Ip-psu" customClass="ContentViewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4bK-fc-wvW"/>
                         <viewControllerLayoutGuide type="bottom" id="qE4-PS-VYn"/>
