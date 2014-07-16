@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9R-Nh-tKT">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="2000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1264"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cK4-Nk-aUo">
@@ -60,6 +60,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="cK4-Nk-aUo" secondAttribute="trailing" constant="20" id="53p-6J-6LD"/>
+                                            <constraint firstAttribute="bottom" secondItem="998-Hn-XTA" secondAttribute="bottom" constant="20" id="7aM-Iu-swy"/>
                                             <constraint firstItem="ZPU-pi-N6D" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="B1O-0z-4ly"/>
                                             <constraint firstItem="htQ-t1-tSm" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="GUl-G5-U72"/>
                                             <constraint firstAttribute="trailing" secondItem="htQ-t1-tSm" secondAttribute="trailing" constant="20" id="HYv-bx-qKt"/>
@@ -68,7 +69,6 @@
                                             <constraint firstItem="htQ-t1-tSm" firstAttribute="top" secondItem="cK4-Nk-aUo" secondAttribute="bottom" constant="8" id="VAG-zT-ff6"/>
                                             <constraint firstItem="998-Hn-XTA" firstAttribute="top" secondItem="ZPU-pi-N6D" secondAttribute="bottom" constant="8" id="VMU-hh-xee"/>
                                             <constraint firstItem="ZPU-pi-N6D" firstAttribute="top" secondItem="htQ-t1-tSm" secondAttribute="bottom" constant="8" id="kEs-XD-Lwv"/>
-                                            <constraint firstAttribute="height" constant="2000" id="oAW-yR-K7V"/>
                                             <constraint firstItem="cK4-Nk-aUo" firstAttribute="top" secondItem="g9R-Nh-tKT" secondAttribute="top" constant="20" id="sB1-TM-ocK"/>
                                             <constraint firstItem="cK4-Nk-aUo" firstAttribute="leading" secondItem="g9R-Nh-tKT" secondAttribute="leading" constant="20" id="tJB-1h-7Y9"/>
                                             <constraint firstAttribute="trailing" secondItem="998-Hn-XTA" secondAttribute="trailing" constant="20" id="xgf-NK-VIx"/>
