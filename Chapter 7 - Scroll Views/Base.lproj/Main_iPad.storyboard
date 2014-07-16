@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Scroll View In Storyboard View Controller - Item-->
+        <!--Scroll View In Storyboard View Controller - ScrollView in NIB Only-->
         <scene sceneID="ujF-WQ-Bq7">
             <objects>
                 <viewController id="xJe-DX-Qz3" customClass="ScrollViewInStoryboardViewController" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="CaT-qY-7E0"/>
+                    <tabBarItem key="tabBarItem" title="ScrollView in NIB Only" id="CaT-qY-7E0"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="2000"/>
@@ -276,9 +276,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="xJe-DX-Qz3" kind="relationship" relationship="viewControllers" id="ZAM-0q-1Tw"/>
                         <segue destination="V6O-Ip-psu" kind="relationship" relationship="viewControllers" id="d2u-JW-DyL"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="50x-HJ-XQ3"/>
-                        <segue destination="xJe-DX-Qz3" kind="relationship" relationship="viewControllers" id="ZAM-0q-1Tw"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dV-DO-Fgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
