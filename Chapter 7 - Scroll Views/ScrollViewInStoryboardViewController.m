@@ -22,6 +22,13 @@
 {
     [super viewDidLoad];
     self.scrollView.delegate = self;
+    self.scrollView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
+}
+
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self.scrollView flashScrollIndicators];
 }
 
 #pragma mark - UIScrollViewDelegate

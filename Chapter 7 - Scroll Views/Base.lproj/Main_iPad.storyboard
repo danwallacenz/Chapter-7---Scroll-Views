@@ -82,6 +82,7 @@
                                     <constraint firstItem="g9R-Nh-tKT" firstAttribute="top" secondItem="Xnp-ME-lAq" secondAttribute="top" id="WTg-4R-yb9"/>
                                     <constraint firstAttribute="bottom" secondItem="g9R-Nh-tKT" secondAttribute="bottom" id="uwA-OY-FUV"/>
                                 </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="25" maxX="0.0" maxY="60"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

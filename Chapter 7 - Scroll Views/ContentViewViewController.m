@@ -70,7 +70,7 @@ const float LABEL_COUNT = 50;
         UILabel *label = [UILabel new];
         label.translatesAutoresizingMaskIntoConstraints = NO;
         
-        label.text = [NSString stringWithFormat: @"Labels only use constraints. %d", i+1 ];
+        label.text = [NSString stringWithFormat: @"%d Labels only use constraints. ", i+1 ];
         label.backgroundColor = contentView.backgroundColor;
         [contentView addSubview:label];
         
@@ -124,7 +124,7 @@ const float LABEL_COUNT = 50;
         UILabel *label = [UILabel new];
         label.translatesAutoresizingMaskIntoConstraints = NO;
         
-        label.text = [NSString stringWithFormat: @"Using explicit constraints throughout. %d", i+1 ];
+        label.text = [NSString stringWithFormat: @"%d Using explicit constraints throughout.", i+1 ];
         label.backgroundColor = contentView.backgroundColor;
         [contentView addSubview:label];
         
@@ -185,7 +185,7 @@ const float LABEL_COUNT = 50;
     // Create labels, keep incrementing y.
     for (int i = 0; i < LABEL_COUNT; i++) {
         UILabel *label = [UILabel new];
-        label.text = [NSString stringWithFormat: @"No constraints %d", i+1 ];
+        label.text = [NSString stringWithFormat: @"No constraints %d.", i+1 ];
         
         [label sizeToFit];
         
@@ -219,7 +219,7 @@ const float LABEL_COUNT = 50;
     
     for (int i = 0; i < LABEL_COUNT; i++) {
         UILabel *label = [UILabel new];
-        label.text = [NSString stringWithFormat: @"ContentView uses constraints, labels don't %d", i+1 ];
+        label.text = [NSString stringWithFormat: @"%d ContentView uses constraints, labels don't.", i+1 ];
         
         [label sizeToFit];
         
