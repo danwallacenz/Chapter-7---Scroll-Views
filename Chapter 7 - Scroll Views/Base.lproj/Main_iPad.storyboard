@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSk-oy-S4Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2199" y="-4894"/>
+            <point key="canvasLocation" x="-1687" y="-4134"/>
         </scene>
         <!--Content View View Controller - Content View-->
         <scene sceneID="W8A-Rd-RRo">
@@ -171,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1C-7k-JFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2199" y="-2804"/>
+            <point key="canvasLocation" x="-1687" y="-2044"/>
         </scene>
         <!--View Controller - Original Version-->
         <scene sceneID="tne-QT-ifu">
@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2199" y="-1913"/>
+            <point key="canvasLocation" x="-1687" y="-1153"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fsb-UG-EJS">
@@ -277,6 +277,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="6Pa-aa-gvr" kind="relationship" relationship="viewControllers" id="FKC-SR-JN7"/>
                         <segue destination="xJe-DX-Qz3" kind="relationship" relationship="viewControllers" id="ZAM-0q-1Tw"/>
                         <segue destination="V6O-Ip-psu" kind="relationship" relationship="viewControllers" id="d2u-JW-DyL"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="50x-HJ-XQ3"/>
@@ -284,7 +285,59 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dV-DO-Fgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3213" y="-2509"/>
+            <point key="canvasLocation" x="-2701" y="-1749"/>
+        </scene>
+        <!--Paging View Controller - Paging-->
+        <scene sceneID="amO-WE-oAK">
+            <objects>
+                <viewController id="6Pa-aa-gvr" customClass="PagingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vi2-hg-6lh"/>
+                        <viewControllerLayoutGuide type="bottom" id="IcD-fM-n2P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFA-zy-Uu6">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au0-KA-6zm">
+                                <rect key="frame" x="20" y="66" width="984" height="355"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6Pa-aa-gvr" id="WUN-cq-uco"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-0i-5l1">
+                                <rect key="frame" x="224" y="429" width="576" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" red="1" green="0.21931261690000001" blue="0.45882864099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="userDidPage:" destination="6Pa-aa-gvr" eventType="valueChanged" id="UHz-af-tjO"/>
+                                </connections>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="au0-KA-6zm" secondAttribute="trailing" constant="20" id="32z-eS-jtx"/>
+                            <constraint firstItem="ZiG-0i-5l1" firstAttribute="top" secondItem="au0-KA-6zm" secondAttribute="bottom" constant="8" id="IsP-qh-6d5"/>
+                            <constraint firstItem="ZiG-0i-5l1" firstAttribute="leading" secondItem="iFA-zy-Uu6" secondAttribute="leading" constant="224" id="IyL-SY-FwG"/>
+                            <constraint firstItem="au0-KA-6zm" firstAttribute="leading" secondItem="iFA-zy-Uu6" secondAttribute="leading" constant="20" id="iZI-76-0ci"/>
+                            <constraint firstItem="IcD-fM-n2P" firstAttribute="top" secondItem="ZiG-0i-5l1" secondAttribute="bottom" constant="302" id="kAx-Kk-gX7"/>
+                            <constraint firstAttribute="trailing" secondItem="ZiG-0i-5l1" secondAttribute="trailing" constant="224" id="lWU-XO-JA7"/>
+                            <constraint firstItem="au0-KA-6zm" firstAttribute="top" secondItem="vi2-hg-6lh" secondAttribute="bottom" constant="46" id="x7D-AM-0dI"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Paging" id="I1d-se-NSZ"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="pager" destination="ZiG-0i-5l1" id="pJS-ys-O7j"/>
+                        <outlet property="sv" destination="au0-KA-6zm" id="TrH-OR-Hhp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3Q-Jw-LSv" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1687" y="-4990"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
