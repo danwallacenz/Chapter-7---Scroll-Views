@@ -104,9 +104,10 @@ const float LABEL_COUNT = 50;
     // Set contentView frame and contentSize explicitly.
     contentView.frame = CGRectMake(0, 0, 0, minSize.height);
     scrollView.contentSize = contentView.frame.size;
+    
+    // Adjust for tabbar and status bar.
+    scrollView.contentInset = UIEdgeInsetsMake(10, 0, 50, 0);
 }
-
-
 
 /**
  Using explicit constraints throughout.
@@ -170,6 +171,9 @@ const float LABEL_COUNT = 50;
                                                                         options: 0
                                                                         metrics: nil
                                                                           views: @{@"contentView": contentView}]];
+    
+    // Adjust for tabbar and status bar.
+    scrollView.contentInset = UIEdgeInsetsMake(10, 0, 50, 0);
 }
 
 /**
@@ -203,6 +207,8 @@ const float LABEL_COUNT = 50;
     if(contentView){
         contentView.frame = CGRectMake(0, 0, 0, y);
         scrollView.contentSize = contentView.frame.size;
+        // Adjust for tabbar and status bar.
+        scrollView.contentInset = UIEdgeInsetsMake(10, 0, 50, 0);
     }
 }
 
@@ -246,6 +252,9 @@ const float LABEL_COUNT = 50;
                                                                         options: 0
                                                                         metrics: nil
                                                                           views: @{@"contentView": contentView}]];
+    
+    // Adjust for tabbar and status bar.
+    scrollView.contentInset = UIEdgeInsetsMake(10, 0, 50, 0);
 }
 
 

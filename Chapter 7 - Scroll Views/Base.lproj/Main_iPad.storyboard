@@ -57,7 +57,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="cK4-Nk-aUo" secondAttribute="trailing" constant="20" id="53p-6J-6LD"/>
                                             <constraint firstAttribute="bottom" secondItem="998-Hn-XTA" secondAttribute="bottom" constant="20" id="7aM-Iu-swy"/>
@@ -85,7 +85,6 @@
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="25" maxX="0.0" maxY="60"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Xnp-ME-lAq" secondAttribute="trailing" id="GbS-he-YGM"/>
                             <constraint firstItem="Xnp-ME-lAq" firstAttribute="leading" secondItem="68K-aH-ePV" secondAttribute="leading" id="J3K-Eg-kVj"/>

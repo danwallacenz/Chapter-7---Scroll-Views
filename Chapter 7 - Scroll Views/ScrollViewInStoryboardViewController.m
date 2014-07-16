@@ -22,9 +22,16 @@
 {
     [super viewDidLoad];
     self.scrollView.delegate = self;
-    self.scrollView.indicatorStyle = UIScrollViewIndicatorStyleBlack;
+    self.scrollView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    
+    // Compensate for tabbar and slightly move down for status bar.
+    self.scrollView.contentInset = UIEdgeInsetsMake(10, 0, 50, 0);
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
 
 -(void)viewDidAppear:(BOOL)animated
 {
