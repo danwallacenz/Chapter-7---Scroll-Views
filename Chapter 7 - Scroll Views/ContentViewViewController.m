@@ -47,9 +47,66 @@ const float LABEL_COUNT = 50;
     [self loadScrollViewWithContentViewWithConstraintsButSubviewsDoNotInView: self.scrollViewContainer1];
     
     // Using explicit constraints throughout.
-    [self loadScrollViewWithContentViewUsingExplicitConstraintsThroughoutInView:self.scrollViewContainer2];
+    [self loadScrollViewWithContentViewUsingExplicitConstraintsThroughoutInView: self.scrollViewContainer2];
+    
+    // Using constraints For labels but explicit contentSize and contentView frame.
+    [self loadScrollViewWithContentViewUsingConstraintsForLabelsButExplicitContentSizeAndContentViewFrameInView: self.scrollViewContainer3];
     
 }
+
+/**
+ Using constraints For labels but explicit contentSize and contentView frame.
+ */
+-(void) loadScrollViewWithContentViewUsingConstraintsForLabelsButExplicitContentSizeAndContentViewFrameInView: (UIView *)containerView
+{
+    
+    UIScrollView *scrollView = containerView.subviews[0];
+    UIView *contentView = scrollView.subviews[0];
+    
+    UILabel *previousLabel = nil;
+    
+    for (int i = 0; i < LABEL_COUNT; i++) {
+        
+        UILabel *label = [UILabel new];
+        label.translatesAutoresizingMaskIntoConstraints = NO;
+        
+        label.text = [NSString stringWithFormat: @"Labels only use constraints. %d", i+1 ];
+        label.backgroundColor = contentView.backgroundColor;
+        [contentView addSubview:label];
+        
+        // Pin label to left side with space of 10.
+        [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat: @"H:|-(10)-[label]"
+                                                                            options: 0
+                                                                            metrics: nil
+                                                                              views: @{@"label":label}]];
+        if(!previousLabel){ // First label, pin to top.
+            [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat: @"V:|-(10)-[label]"
+                                                                                options: 0
+                                                                                metrics: nil
+                                                                                  views: @{@"label":label}]];
+        }else{
+            // All other labels, pin to previous label.
+            [contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat: @"V:[previousLabel]-(10)-[label]"
+                                                                                options: 0
+                                                                                metrics: nil
+                                                                                  views: @{@"label":label, @"previousLabel":previousLabel}]];
+        }
+        previousLabel = label;
+    }
+    
+    // last one, pin to bottom, this dictates content size height
+    [contentView addConstraints:
+     [NSLayoutConstraint constraintsWithVisualFormat:@"V:[previousLabel]-(10)-|"
+                                             options:0 metrics:nil
+                                               views:@{@"previousLabel":previousLabel}]];
+    
+    CGSize minSize = [contentView systemLayoutSizeFittingSize: UILayoutFittingCompressedSize];
+    // Set contentView frame and contentSize explicitly.
+    contentView.frame = CGRectMake(0, 0, 0, minSize.height);
+    scrollView.contentSize = contentView.frame.size;
+}
+
+
 
 /**
  Using explicit constraints throughout.
