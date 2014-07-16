@@ -299,14 +299,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au0-KA-6zm">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="au0-KA-6zm">
                                 <rect key="frame" x="20" y="66" width="984" height="355"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="6Pa-aa-gvr" id="WUN-cq-uco"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-0i-5l1">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-0i-5l1">
                                 <rect key="frame" x="224" y="429" width="576" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -317,15 +317,6 @@
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="au0-KA-6zm" secondAttribute="trailing" constant="20" id="32z-eS-jtx"/>
-                            <constraint firstItem="ZiG-0i-5l1" firstAttribute="top" secondItem="au0-KA-6zm" secondAttribute="bottom" constant="8" id="IsP-qh-6d5"/>
-                            <constraint firstItem="ZiG-0i-5l1" firstAttribute="leading" secondItem="iFA-zy-Uu6" secondAttribute="leading" constant="224" id="IyL-SY-FwG"/>
-                            <constraint firstItem="au0-KA-6zm" firstAttribute="leading" secondItem="iFA-zy-Uu6" secondAttribute="leading" constant="20" id="iZI-76-0ci"/>
-                            <constraint firstItem="IcD-fM-n2P" firstAttribute="top" secondItem="ZiG-0i-5l1" secondAttribute="bottom" constant="302" id="kAx-Kk-gX7"/>
-                            <constraint firstAttribute="trailing" secondItem="ZiG-0i-5l1" secondAttribute="trailing" constant="224" id="lWU-XO-JA7"/>
-                            <constraint firstItem="au0-KA-6zm" firstAttribute="top" secondItem="vi2-hg-6lh" secondAttribute="bottom" constant="46" id="x7D-AM-0dI"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Paging" id="I1d-se-NSZ"/>
