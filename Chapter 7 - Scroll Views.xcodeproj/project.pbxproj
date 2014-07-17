@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CB2D272F1977E205009BBF69 /* Mona_Lisa-1000x1515.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2D272E1977E205009BBF69 /* Mona_Lisa-1000x1515.png */; };
+		CB2D27321977E577009BBF69 /* MonaLisaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB2D27311977E577009BBF69 /* MonaLisaViewController.m */; };
 		E00F8D8519763C0400169B37 /* ScrollViewInStoryboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00F8D8019763C0400169B37 /* ScrollViewInStoryboardViewController.m */; };
 		E00F8D891976511600169B37 /* PagingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E00F8D881976511600169B37 /* PagingViewController.m */; };
 		E0320F37190DF87D00B76BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0320F36190DF87D00B76BCB /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		CB2D272E1977E205009BBF69 /* Mona_Lisa-1000x1515.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mona_Lisa-1000x1515.png"; sourceTree = "<group>"; };
+		CB2D27301977E577009BBF69 /* MonaLisaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonaLisaViewController.h; sourceTree = "<group>"; };
+		CB2D27311977E577009BBF69 /* MonaLisaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonaLisaViewController.m; sourceTree = "<group>"; };
 		E00F8D8019763C0400169B37 /* ScrollViewInStoryboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewInStoryboardViewController.m; sourceTree = "<group>"; };
 		E00F8D8119763C0400169B37 /* ScrollViewInStoryboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewInStoryboardViewController.h; sourceTree = "<group>"; };
 		E00F8D871976511600169B37 /* PagingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagingViewController.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 		E062A0801975D31C00A53A80 /* view controllers */ = {
 			isa = PBXGroup;
 			children = (
+				CB2D27301977E577009BBF69 /* MonaLisaViewController.h */,
+				CB2D27311977E577009BBF69 /* MonaLisaViewController.m */,
 				E00F8D871976511600169B37 /* PagingViewController.h */,
 				E00F8D881976511600169B37 /* PagingViewController.m */,
 				E00F8D8019763C0400169B37 /* ScrollViewInStoryboardViewController.m */,
@@ -283,6 +288,7 @@
 				E00F8D891976511600169B37 /* PagingViewController.m in Sources */,
 				E00F8D8519763C0400169B37 /* ScrollViewInStoryboardViewController.m in Sources */,
 				E0320F50190DF87D00B76BCB /* ViewController.m in Sources */,
+				CB2D27321977E577009BBF69 /* MonaLisaViewController.m in Sources */,
 				E0320F47190DF87D00B76BCB /* AppDelegate.m in Sources */,
 				E062A07F1975D30F00A53A80 /* ContentViewViewController.m in Sources */,
 				E0320F43190DF87D00B76BCB /* main.m in Sources */,

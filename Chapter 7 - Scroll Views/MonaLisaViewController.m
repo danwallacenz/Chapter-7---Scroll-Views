@@ -27,6 +27,51 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor greenColor];
+    
+    // Add scroll view.
+    UIScrollView *scrollView = [UIScrollView new];
+    scrollView.backgroundColor = [UIColor redColor];
+    scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.view addSubview: scrollView];
+    
+    [self.view addConstraints:
+        [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-[scrollView]-|"
+                                                options:0
+                                                metrics:nil
+                                                  views:@{@"scrollView":scrollView}]];
+    [self.view addConstraints:
+        [NSLayoutConstraint constraintsWithVisualFormat: @"V:|-[scrollView]-|"
+                                             options:0
+                                             metrics:nil
+                                               views:@{@"scrollView":scrollView}]];
+    
+    // Add image.
+    UIImage *monaLisa = [UIImage imageNamed:@"Mona_Lisa-1000x1515.png"];
+    
+    NSLog(@"monaLisa size = %@", NSStringFromCGSize(monaLisa.size));
+    
+    // Add image view.
+    UIImageView *imageView = [UIImageView new];
+    [imageView setImage: monaLisa];
+    
+    [scrollView addSubview:imageView];
+    
+    imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [scrollView addConstraints:[
+        NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[imageView]-|"
+                                options:0
+                                metrics:nil
+                                views:@{@"imageView":imageView}]];
+    [scrollView addConstraints:[
+                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[imageView]-|"
+                                options:0
+                                metrics:nil
+                                views:@{@"imageView":imageView}]];
+
 }
 
 - (void)didReceiveMemoryWarning

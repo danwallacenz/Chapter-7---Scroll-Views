@@ -106,6 +106,26 @@
             </objects>
             <point key="canvasLocation" x="-1687" y="-4134"/>
         </scene>
+        <!--Mona Lisa View Controller - Mona Lisa-->
+        <scene sceneID="kvJ-rU-Im3">
+            <objects>
+                <viewController id="OmT-xG-EmX" customClass="MonaLisaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4R5-Bk-Dlb"/>
+                        <viewControllerLayoutGuide type="bottom" id="tfq-Pf-Vfv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="TopLeft" id="DJx-gG-FbF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mona Lisa" id="F0V-GK-YO7"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12y-DY-756" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-276" y="-3759"/>
+        </scene>
         <!--Content View View Controller - Content View-->
         <scene sceneID="W8A-Rd-RRo">
             <objects>
@@ -277,6 +297,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="OmT-xG-EmX" kind="relationship" relationship="viewControllers" id="ma0-Cc-9Bt"/>
                         <segue destination="6Pa-aa-gvr" kind="relationship" relationship="viewControllers" id="FKC-SR-JN7"/>
                         <segue destination="xJe-DX-Qz3" kind="relationship" relationship="viewControllers" id="ZAM-0q-1Tw"/>
                         <segue destination="V6O-Ip-psu" kind="relationship" relationship="viewControllers" id="d2u-JW-DyL"/>
@@ -285,7 +306,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1dV-DO-Fgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2701" y="-1749"/>
+            <point key="canvasLocation" x="-2757" y="-3737"/>
         </scene>
         <!--Paging View Controller - Paging-->
         <scene sceneID="amO-WE-oAK">
