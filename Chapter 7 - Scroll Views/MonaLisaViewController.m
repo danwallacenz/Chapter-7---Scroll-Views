@@ -38,12 +38,12 @@
     [self.view addSubview: scrollView];
     
     [self.view addConstraints:
-        [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-[scrollView]-|"
+        [NSLayoutConstraint constraintsWithVisualFormat: @"H:|-(0)-[scrollView]-(0)-|"
                                                 options:0
                                                 metrics:nil
                                                   views:@{@"scrollView":scrollView}]];
     [self.view addConstraints:
-        [NSLayoutConstraint constraintsWithVisualFormat: @"V:|-[scrollView]-|"
+        [NSLayoutConstraint constraintsWithVisualFormat: @"V:|-(0)-[scrollView]-(0)-|"
                                              options:0
                                              metrics:nil
                                                views:@{@"scrollView":scrollView}]];
@@ -51,23 +51,29 @@
     // Add image.
     UIImage *monaLisa = [UIImage imageNamed:@"Mona_Lisa-1000x1515.png"];
     
-    NSLog(@"monaLisa size = %@", NSStringFromCGSize(monaLisa.size));
+//    NSLog(@"monaLisa size = %@", NSStringFromCGSize(monaLisa.size));
+//    NSLog(@"monaLisa scale = %f", monaLisa.scale);
     
     // Add image view.
     UIImageView *imageView = [UIImageView new];
     [imageView setImage: monaLisa];
+    imageView.bounds = CGRectMake(0, 0, monaLisa.size.width * monaLisa.scale, monaLisa.size.height * monaLisa.scale);
+    
+    imageView.contentScaleFactor = 0;
     
     [scrollView addSubview:imageView];
     
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
     
+    imageView.contentMode = UIViewContentModeScaleToFill;
+    
     [scrollView addConstraints:[
-        NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[imageView]-|"
+        NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[imageView]-(0)-|"
                                 options:0
                                 metrics:nil
                                 views:@{@"imageView":imageView}]];
     [scrollView addConstraints:[
-                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[imageView]-|"
+                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[imageView]-(0)-|"
                                 options:0
                                 metrics:nil
                                 views:@{@"imageView":imageView}]];

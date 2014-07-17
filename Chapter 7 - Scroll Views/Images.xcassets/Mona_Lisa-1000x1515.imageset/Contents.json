@@ -2,13 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "Mona_Lisa-1000x1515.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x",
-      "filename" : "Mona_Lisa-1000x1515-1.png"
+      "scale" : "2x"
     }
   ],
   "info" : {
