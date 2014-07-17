@@ -27,6 +27,8 @@
 		E0320F63190DF87D00B76BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0320F61190DF87D00B76BCB /* InfoPlist.strings */; };
 		E0320F65190DF87D00B76BCB /* Chapter_7___Scroll_ViewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E0320F64190DF87D00B76BCB /* Chapter_7___Scroll_ViewsTests.m */; };
 		E062A07F1975D30F00A53A80 /* ContentViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E062A07E1975D30F00A53A80 /* ContentViewViewController.m */; };
+		E0B03ABD197869FA002C019F /* Mona_Lisa-2000x3030@104ppcm.png in Resources */ = {isa = PBXBuildFile; fileRef = E0B03ABB197869FA002C019F /* Mona_Lisa-2000x3030@104ppcm.png */; };
+		E0B03ABE197869FA002C019F /* Mona_Lisa-1000x1515@52ppcm.png in Resources */ = {isa = PBXBuildFile; fileRef = E0B03ABC197869FA002C019F /* Mona_Lisa-1000x1515@52ppcm.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E0320F64190DF87D00B76BCB /* Chapter_7___Scroll_ViewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Chapter_7___Scroll_ViewsTests.m"; sourceTree = "<group>"; };
 		E062A07D1975D30F00A53A80 /* ContentViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewViewController.h; sourceTree = "<group>"; };
 		E062A07E1975D30F00A53A80 /* ContentViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewViewController.m; sourceTree = "<group>"; };
+		E0B03ABB197869FA002C019F /* Mona_Lisa-2000x3030@104ppcm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mona_Lisa-2000x3030@104ppcm.png"; sourceTree = "<group>"; };
+		E0B03ABC197869FA002C019F /* Mona_Lisa-1000x1515@52ppcm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mona_Lisa-1000x1515@52ppcm.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,8 @@
 				E062A0801975D31C00A53A80 /* view controllers */,
 				E0320F51190DF87D00B76BCB /* Images.xcassets */,
 				CB2D272E1977E205009BBF69 /* Mona_Lisa-1000x1515.png */,
+				E0B03ABB197869FA002C019F /* Mona_Lisa-2000x3030@104ppcm.png */,
+				E0B03ABC197869FA002C019F /* Mona_Lisa-1000x1515@52ppcm.png */,
 				E0320F3D190DF87D00B76BCB /* Supporting Files */,
 			);
 			path = "Chapter 7 - Scroll Views";
@@ -265,6 +271,8 @@
 				E0320F4D190DF87D00B76BCB /* Main_iPad.storyboard in Resources */,
 				E0320F52190DF87D00B76BCB /* Images.xcassets in Resources */,
 				E0320F4A190DF87D00B76BCB /* Main_iPhone.storyboard in Resources */,
+				E0B03ABD197869FA002C019F /* Mona_Lisa-2000x3030@104ppcm.png in Resources */,
+				E0B03ABE197869FA002C019F /* Mona_Lisa-1000x1515@52ppcm.png in Resources */,
 				CB2D272F1977E205009BBF69 /* Mona_Lisa-1000x1515.png in Resources */,
 				E0320F41190DF87D00B76BCB /* InfoPlist.strings in Resources */,
 			);
