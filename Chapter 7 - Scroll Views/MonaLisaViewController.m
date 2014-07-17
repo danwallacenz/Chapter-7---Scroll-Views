@@ -49,7 +49,7 @@
                                                views:@{@"scrollView":scrollView}]];
     
     // Add image.
-    UIImage *monaLisa = [UIImage imageNamed:@"Mona_Lisa-1000x1515.png"];
+    UIImage *monaLisa = [UIImage imageNamed:@"Mona_Lisa"];
     
 //    NSLog(@"monaLisa size = %@", NSStringFromCGSize(monaLisa.size));
 //    NSLog(@"monaLisa scale = %f", monaLisa.scale);
