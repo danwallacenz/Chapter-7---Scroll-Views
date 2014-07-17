@@ -45,6 +45,8 @@
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSLog(@"UIScrollViewDelegate scrollViewDidScroll - bounds origin: %@",  NSStringFromCGPoint(scrollView.bounds.origin));
+    
+    NSLog(@"\n%@\n\n",[self diagnostics]);
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
@@ -117,17 +119,38 @@
 -(NSString *)diagnostics
 {
     NSString *diagnostics = @"";
-    NSString *contentSize = NSStringFromCGSize(self.scrollView.contentSize);
-    NSString *contentOffset = NSStringFromCGPoint(self.scrollView.contentOffset);
-    NSString *bounds = NSStringFromCGRect(self.scrollView.bounds);
-    NSString *contentInset = NSStringFromUIEdgeInsets(self.scrollView.contentInset);
-    NSString *decelerating = [NSString stringWithFormat:@"%@", self.scrollView.decelerating?@"yes":@"no"];
+    NSString *contentSize = [NSString stringWithFormat:@"\ncontentSize = %@", NSStringFromCGSize(self.scrollView.contentSize) ];
+    NSString *contentOffset = [NSString stringWithFormat:@"\ncontentOffset = %@", NSStringFromCGPoint(self.scrollView.contentOffset)];
+    NSString *bounds = [NSString stringWithFormat:@"\nbounds = %@", NSStringFromCGRect(self.scrollView.bounds)];
+    NSString *contentInset = [NSString stringWithFormat:@"\ncontentInset = %@", NSStringFromUIEdgeInsets(self.scrollView.contentInset)];
+    
+    NSString *decelerating = [NSString stringWithFormat:@"\ndecelerating = %@", self.scrollView.decelerating?@"yes":@"no"];
+    NSString *decelerationRate = [NSString stringWithFormat:@"\ndecelerationRate = %f", self.scrollView.decelerationRate];
+    
+    NSString *dragging= [NSString stringWithFormat:@"\ndragging = %@", self.scrollView.dragging?@"yes":@"no"];
+    
+    NSString *zoomScale= [NSString stringWithFormat:@"\nzoomScale = %f",  self.scrollView.zoomScale];
+    NSString *maximumZoomScale= [NSString stringWithFormat:@"\nmaximumZoomScale = %f",  self.scrollView.maximumZoomScale];
+    NSString *minimumZoomScale= [NSString stringWithFormat:@"\nminimumZoomScale = %f",  self.scrollView.minimumZoomScale];
+    
+    NSString *tracking = [NSString stringWithFormat:@"\ntracking = %@", self.scrollView.tracking?@"yes":@"no"];
+    NSString *zooming = [NSString stringWithFormat:@"\nzooming = %@", self.scrollView.zooming?@"yes":@"no"];
+    NSString *zoomBouncing = [NSString stringWithFormat:@"\nzoomBouncing = %@", self.scrollView.zoomBouncing?@"yes":@"no"];
+
 
     diagnostics = [diagnostics stringByAppendingString:contentSize];
     diagnostics = [diagnostics stringByAppendingString:contentOffset];
     diagnostics = [diagnostics stringByAppendingString:bounds];
     diagnostics = [diagnostics stringByAppendingString:contentInset];
     diagnostics = [diagnostics stringByAppendingString:decelerating];
+    diagnostics = [diagnostics stringByAppendingString:decelerationRate];
+    diagnostics = [diagnostics stringByAppendingString:dragging];
+    diagnostics = [diagnostics stringByAppendingString:zoomScale];
+    diagnostics = [diagnostics stringByAppendingString:maximumZoomScale];
+    diagnostics = [diagnostics stringByAppendingString:minimumZoomScale];
+    diagnostics = [diagnostics stringByAppendingString:tracking];
+    diagnostics = [diagnostics stringByAppendingString:zooming];
+    diagnostics = [diagnostics stringByAppendingString:zoomBouncing];
     
     return diagnostics;
 }
