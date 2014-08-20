@@ -67,26 +67,19 @@
     
     imageView.contentMode = UIViewContentModeScaleToFill;
 
-    UIInterfaceOrientation currentOrientation = [self currentDeviceOrientation];
-    CGFloat widthOfView;
-    if(currentOrientation == UIInterfaceOrientationPortrait){
-        widthOfView = MIN(self.view.bounds.size.height, self.view.bounds.size.width); // portrait
-    }else{
-        widthOfView = MAX(self.view.bounds.size.height, self.view.bounds.size.width); // landscape
-    }
-    CGFloat widthOfImage = MIN(monaLisa.size.height, monaLisa.size.width);
     
+    // center image
+    [scrollView addConstraint:[NSLayoutConstraint constraintWithItem:imageView
+                                                           attribute:NSLayoutAttributeCenterX
+                                                           relatedBy:NSLayoutRelationEqual
+                                                              toItem:scrollView
+                                                           attribute:NSLayoutAttributeCenterX
+                                                          multiplier:1
+                                                            constant:0]];
     
-    CGFloat diff = (widthOfView - widthOfImage) / 2.0;
-    
-    NSDictionary *metrics = @{@"diff":@(diff)};
+
     [scrollView addConstraints:[
-        NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(diff)-[imageView]-(diff)-|"
-                                options:0
-                                metrics:metrics
-                                views:@{@"imageView":imageView}]];
-    [scrollView addConstraints:[
-                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[imageView]-(10)-|"
+                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[imageView]-(56)-|" // 56 = tabbar for non-retina iPad.
                                 options:0
                                 metrics:nil
                                 views:@{@"imageView":imageView}]];
