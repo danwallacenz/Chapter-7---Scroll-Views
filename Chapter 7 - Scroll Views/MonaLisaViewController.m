@@ -10,6 +10,9 @@
 
 @interface MonaLisaViewController ()
 
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (strong, nonatomic) UIImageView *imageView;
+
 @end
 
 @implementation MonaLisaViewController
@@ -51,13 +54,10 @@
     // Add image.
     UIImage *monaLisa = [UIImage imageNamed:@"Mona_Lisa"];
     
-//    NSLog(@"monaLisa size = %@", NSStringFromCGSize(monaLisa.size));
-//    NSLog(@"monaLisa scale = %f", monaLisa.scale);
-    
     // Add image view.
     UIImageView *imageView = [UIImageView new];
     [imageView setImage: monaLisa];
-    imageView.bounds = CGRectMake(0, 0, monaLisa.size.width * monaLisa.scale, monaLisa.size.height * monaLisa.scale);
+
     
     imageView.contentScaleFactor = 0;
     
@@ -66,19 +66,44 @@
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
     
     imageView.contentMode = UIViewContentModeScaleToFill;
-    
-    [scrollView addConstraints:[
-        NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(0)-[imageView]-(0)-|"
-                                options:0
-                                metrics:nil
-                                views:@{@"imageView":imageView}]];
-    [scrollView addConstraints:[
-                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[imageView]-(0)-|"
-                                options:0
-                                metrics:nil
-                                views:@{@"imageView":imageView}]];
 
+    UIInterfaceOrientation currentOrientation = [self currentDeviceOrientation];
+    CGFloat widthOfView;
+    if(currentOrientation == UIInterfaceOrientationPortrait){
+        widthOfView = MIN(self.view.bounds.size.height, self.view.bounds.size.width); // portrait
+    }else{
+        widthOfView = MAX(self.view.bounds.size.height, self.view.bounds.size.width); // landscape
+    }
+    CGFloat widthOfImage = MIN(monaLisa.size.height, monaLisa.size.width);
+    
+    
+    CGFloat diff = (widthOfView - widthOfImage) / 2.0;
+    
+    NSDictionary *metrics = @{@"diff":@(diff)};
+    [scrollView addConstraints:[
+        NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(diff)-[imageView]-(diff)-|"
+                                options:0
+                                metrics:metrics
+                                views:@{@"imageView":imageView}]];
+    [scrollView addConstraints:[
+                                NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(0)-[imageView]-(10)-|"
+                                options:0
+                                metrics:nil
+                                views:@{@"imageView":imageView}]];
+  
+    self.scrollView = scrollView;
+    self.imageView = imageView;
+    
+
+    
+    NSLog(@"self.imageView.size = %@", NSStringFromCGSize(self.imageView.bounds.size));
+    NSLog(@"self.scrollView.size =  %@",NSStringFromCGSize(self.scrollView.bounds.size));
+    NSLog(@"image.size =  %@",NSStringFromCGSize(self.imageView.image.size));
+    NSLog(@"view.size =  %@",NSStringFromCGSize(self.view.bounds.size));
+    NSLog(@"");
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -86,15 +111,44 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(void)viewWillAppear:(BOOL)animated
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [super viewWillAppear:animated];
+    NSLog(@"self.imageView.size = %@", NSStringFromCGSize(self.imageView.bounds.size));
+    NSLog(@"self.scrollView.size =  %@",NSStringFromCGSize(self.scrollView.bounds.size));
+    NSLog(@"image.size =  %@",NSStringFromCGSize(self.imageView.image.size));
+    NSLog(@"");
 }
-*/
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    NSLog(@"self.imageView.size = %@", NSStringFromCGSize(self.imageView.bounds.size));
+    NSLog(@"self.scrollView.size =  %@",NSStringFromCGSize(self.scrollView.bounds.size));
+    NSLog(@"image.size =  %@",NSStringFromCGSize(self.imageView.image.size));
+    NSLog(@"");
+}
+
+
+- (UIInterfaceOrientation)currentDeviceOrientation
+{
+    
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    
+    if(orientation == 0){ //Default orientation
+        //UI is in Default (Portrait) -- this is really a just a failsafe.
+    }
+    else if(orientation == UIInterfaceOrientationPortrait){
+        //Do something if the orientation is in Portrait
+    }
+    else if(orientation == UIInterfaceOrientationLandscapeLeft){
+        // Do something if Left
+    }
+    else if(orientation == UIInterfaceOrientationLandscapeRight){
+        //Do something if right
+    }
+    
+    return orientation;
+}
 
 @end
